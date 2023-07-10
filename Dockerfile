@@ -9,13 +9,9 @@ RUN apt-get update && \
     apt-get install -y cmake 
 
 RUN git clone https://github.com/aligungr/UERANSIM && \
-    cd UERANSIM && git checkout v3.1.0
+    cd UERANSIM && git checkout v3.1.0 && make
 
 # COPY ./UERANSIM /UERANSIM
-
-WORKDIR /UERANSIM 
-
-ENTRYPOINT [ "make" ]
 
 CMD [ "bash" ]
 # CMD ["build/nr-gnb", "-c", "config/free5gc-gnb.yaml"]
