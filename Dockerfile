@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get upgrade && \
-    apt-get -y install make g++ libsctp-dev lksctp-tools iproute2 git iptables net-tools iputils-ping snapd
+    apt-get -y install make g++ libsctp-dev lksctp-tools iproute2 git iptables net-tools iputils-ping snapd wget
 
 RUN apt-get update && \
     apt-get install -y cmake 
@@ -11,6 +11,7 @@ RUN apt-get update && \
 RUN git clone https://github.com/aligungr/UERANSIM && \
     cd UERANSIM && git checkout v3.1.0
 
+WORKDIR /UERANSIM
 # COPY ./UERANSIM /UERANSIM
 
 CMD [ "make" ]
