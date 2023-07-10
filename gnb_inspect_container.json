@@ -1,0 +1,151 @@
+[
+    {
+        "Id": "c1c9d4b6c50f7cbf3adb983bcbb97ae6e1b28c18516dfb3be91cf16a21ea8ff4",
+        "Created": "2023-07-06T22:34:02.612404606Z",
+        "Path": "/bin/sh",
+        "Args": [
+            "-c",
+            "/mnt/ueransim/ueransim_init.sh && ./nr-gnb -c ../config/free5GC-gnb.yaml & bash"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 53942,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-07-07T12:41:34.948271207Z",
+            "FinishedAt": "2023-07-07T12:41:18.604835923Z"
+        },
+        "Image": "sha256:ea6f07e6d255704c5bbebd91e2d0f3e49ac461a7a21a8f2cddc79ccbf75a42d6",
+        "ResolvConfPath": "/var/lib/docker/containers/c1c9d4b6c50f7cbf3adb983bcbb97ae6e1b28c18516dfb3be91cf16a21ea8ff4/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/c1c9d4b6c50f7cbf3adb983bcbb97ae6e1b28c18516dfb3be91cf16a21ea8ff4/hostname",
+        "HostsPath": "/var/lib/docker/containers/c1c9d4b6c50f7cbf3adb983bcbb97ae6e1b28c18516dfb3be91cf16a21ea8ff4/hosts",
+        "LogPath": "/var/lib/docker/containers/c1c9d4b6c50f7cbf3adb983bcbb97ae6e1b28c18516dfb3be91cf16a21ea8ff4/c1c9d4b6c50f7cbf3adb983bcbb97ae6e1b28c18516dfb3be91cf16a21ea8ff4-json.log",
+        "Name": "/nr_gnb",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/etc/localtime:/etc/localtime:ro",
+                "/etc/timezone:/etc/timezone:ro",
+                "/home/ubuntu/ueransim/files:/mnt/ueransim:rw"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "docker_free5GC_default",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": [],
+            "CapAdd": [
+                "NET_ADMIN"
+            ],
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [
+                {
+                    "PathOnHost": "/dev/net/tun",
+                    "PathInContainer": "/dev/net/tun",
+                    "CgroupPermissions": "rwm"
+                }
+            ],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "KernelMemory": 0,
+            "KernelMemoryTCP": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/8c9fef5697798de1cf10001dc44baeb30eaa5a6a7f9015a15e9f55e20bc1eed8-init/diff:/var/lib/docker/overlay2/47b6fd673d4ba5ca71084ca43ac75e47f7eeefccc4b43a649fab15140a053d53/diff:/var/lib/docker/overlay2/82ac174a4afd0f0e65756d404b2ffb6b80c46046bf150e46084e06bdefd193bf/diff:/var/lib/docker/overlay2/b1bf200df78c17d6c1fe7b58d44703771d3c2105e1ca1906bfbd31e2d846c4bc/diff:/var/lib/docker/overlay2/3b9aca69aea5686bd3fd84d19bdea04ef60f8d949e15fc0445a323cca8875a11/diff",
+                "MergedDir": "/var/lib/docker/overlay2/8c9fef5697798de1cf10001dc44baeb30eaa5a6a7f9015a15e9f55e20bc1eed8/merged",
+                "UpperDir": "/var/lib/docker/overlay2/8c9fef5697798de1cf10001dc44baeb30eaa5a6a7f9015a15e9f55e20bc1eed8/diff",
+                "WorkDir": "/var/lib/docker/overlay2/8c9fef5697798de1cf10001dc44baeb30eaa5a6a7f9015a15e9f55e20bc1eed8/work"
+            },
+            "Name": "overlay2"
+        }
+    }
+]
