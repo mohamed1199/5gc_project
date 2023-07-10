@@ -1,19 +1,12 @@
-FROM ubuntu:20.04
+FROM free5gc/ueransim:latest
 
-ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get upgrade && \
-    apt-get -y install make g++ libsctp-dev lksctp-tools iproute2 git iptables net-tools iputils-ping snapd wget
+COPY ./config/free5gc-gnb.yaml /ueransim/config/free5gc-gnb.yaml
+COPY ./config/free5gc-ue.yaml /ueransim/config/free5gc-ue.yaml
 
-RUN apt-get update && \
-    apt-get install -y cmake 
+WORKDIR /ueransim
 
-RUN git clone https://github.com/aligungr/UERANSIM && \
-    cd UERANSIM && git checkout v3.1.0
+# CMD ["./nr-gnb", "-c", "./config/free5gc-gnb.yaml"]
 
-WORKDIR /UERANSIM
-# COPY ./UERANSIM /UERANSIM
-
-CMD [ "make" ]
-# CMD ["build/nr-gnb", "-c", "config/free5gc-gnb.yaml"]
+CMD ["bash"]
 
