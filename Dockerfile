@@ -17,5 +17,6 @@ WORKDIR /UERANSIM
 
 ENTRYPOINT [ "make" ]
 
-CMD ["build/nr-gnb", "-c", "config/free5gc-gnb.yaml"]
+CMD [ "bash" ]
+# CMD ["build/nr-gnb", "-c", "config/free5gc-gnb.yaml"]
 
