@@ -7,7 +7,7 @@ RUN apt-get update && apt-get upgrade && \
 
 ENTRYPOINT [ "snap install cmake --classic" ]    
 
-COPY /home/ubuntu/UERANSIM /UERANSIM
+COPY ./UERANSIM /UERANSIM
 
 WORKDIR /UERANSIM 
 
