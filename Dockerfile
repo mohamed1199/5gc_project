@@ -5,7 +5,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && apt-get upgrade && \
     apt-get -y install make g++ libsctp-dev lksctp-tools iproute2 iptables net-tools iputils-ping snapd
 
-ENTRYPOINT [ "snap install cmake --classic" ]    
+RUN apt-get update && \
+    apt-get install -y cmake 
 
 COPY ./UERANSIM /UERANSIM
 
