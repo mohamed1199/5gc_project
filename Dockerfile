@@ -2,10 +2,10 @@ FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && \
-    apt-get -y install apt-utils make g++ libsctp-dev lksctp-tools git vim iproute2 iptables net-tools ifupdown iputils-ping wget libssl-dev snapd
+RUN apt-get update && apt-get update && \
+    apt-get -y install make g++ libsctp-dev lksctp-tools iproute2 iptables net-tools iputils-ping snapd
 
-RUN snap install cmake --classic    
+RUN sudo snap install cmake --classic    
 
 COPY /home/ubuntu/UERANSIM /UERANSIM
 
